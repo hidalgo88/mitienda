@@ -1,0 +1,243 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: #000;
+}
+body{
+    background-color: #fdfdfd;
+}
+section{
+    padding: 0 100px;
+}
+header{
+    background-color: #F4EEFF;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 110px 0;
+}
+.login{
+    display: flex;
+    align-items: center;
+}
+.login i{
+    margin: auto 15px;
+}
+#navbar{
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+#navbar ul li{
+    display: inline-block;
+    margin: 0 10px;
+    transition: all 0.3s;
+}
+a{
+    text-decoration: none;
+}
+#navbar ul li:hover{
+    transform: scale(1.1);
+}
+.banner{
+    width: 100vw;
+    height: 60vh;
+    background: linear-gradient(rgba(100,100,100,0.5), rgba(100,100,100,0.5)), url(/img/banner01.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 40px;
+}
+h2{
+    font-size: 2.5rem;
+    text-align: left;
+    margin: 30px;
+}
+.productos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+.box{
+    width: 340px;
+    margin: 20px;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.3);
+}
+.productos div img{
+    width: 100%;
+}
+.imageText{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+.text span{
+    margin: 10px 10px;
+}
+
+.ubicacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.map-movil{
+    display: none;
+}
+.footer{
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(/img/bg-footer01.jpg) no-repeat center center;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 40px;
+}
+.footer>h3, .footer>li{
+    color: #000;
+}
+.footer #logo{
+    display: flex;
+    align-items: center;
+}
+.footer li{
+    list-style: none;
+    margin: 5px 0;
+}
+.footer h3{
+    margin: 5px 0;
+}
+.fa-brands{
+    margin: 0 5px;
+}
+/* FORMULARIO */
+.pedidos{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background: #fff;
+    width: 60vw;
+    box-shadow: 0 0 60px -10px rgba(0,0,0,.25);
+    transition: .7s;
+  }
+  .input-pedidos {
+    border: none;
+    border-bottom: 1px solid #bdc3c7;
+    padding: 5px 3px;
+    margin: 25px;
+    transition: .7s;
+  }
+  .input-pedidos::placeholder {
+    color: rgba(0,0,0,.4);
+  }
+  .input-pedidos:focus {
+    outline-style:none;
+    box-shadow: 0 1px 0 #bdc3c7;
+    border-top: transparent;
+    transition: 200ms;
+  }
+  .tipo-prod{
+    margin: 10px 25px;
+  }
+  .input-btn{
+    padding: 5px 15px;
+    background-color: #fff;
+    border: solid 1px #bdc3c7;
+  }
+  .btn-form{
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+  }
+  .input-btn:hover{
+    background-color: #E9ECEF;
+    border: solid 1px #000;
+  }
+  .input-radio{
+    margin: -5px 0px;
+  }
+  textarea{
+    padding: 10px;
+    margin: 25px;
+    border: 1px solid #bdc3c7;
+  }
+
+@media (max-width: 576px) {
+    .slider-box ul li img{
+        height: 50vh;
+        width: auto;
+    }
+    .banner{
+        height: 30vh;
+    }
+    .imageText{
+        font-size: 2rem;
+    }
+    nav{
+        padding: 50px 50px 30px;
+    }
+    #navbar{
+        padding: 10px;
+        display: none;
+    }
+    #navbar ul{
+        display: flex;
+        flex-direction: column;
+    }
+    #navbar ul li{
+        margin: 3px 0;
+    }
+    .footer{
+        flex-direction: column;
+    }
+    .footer div{
+        margin: 10px 0;
+    }
+    h2{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .login span{
+        display: none;
+    }
+    .map-movil{
+        display: block;
+    }
+    .map-full{
+        display: none;
+    }
+    .form-container{
+        width: 80vw;
+        padding: 10px;
+    }
+    .banner{
+        height: 40vh;
+    }
+    section{
+        padding: 0 50px;
+    }
+}
