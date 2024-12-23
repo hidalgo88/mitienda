@@ -1,0 +1,363 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: #000;
+}
+body{
+    background-color: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+}
+section{
+    padding: 0 100px;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    background-color: #F4EEFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    transition: 0.5s;
+}
+.verCarrito{
+    display: none;
+}
+header.sticky{
+    background: #F4EEFF;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+.iconoCart i{
+    font-size: 1.5rem;
+  }
+.abrirMenu, .cerrarMenu, .abrirCarrito, .cerrarCarrito{
+    display: none;
+}
+.login{
+    display: flex;
+    align-items: center;
+}
+.login i{
+    margin: auto 15px;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+}
+.navbar ul li{
+    display: inline-block;
+    margin: 0 10px;
+    transition: all 0.3s;
+}
+a{
+    text-decoration: none;
+}
+.navbar ul li:hover{
+    transform: scale(1.1);
+}
+main{
+    margin-top: 130px;
+}
+.banner{
+    width: 100vw;
+    height: 60vh;
+    background: linear-gradient(rgba(100,100,100,0.5), rgba(100,100,100,0.5)), url(/img/banner01.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 40px;
+}
+h2{
+    font-size: 2.5rem;
+    text-align: left;
+    margin: 30px;
+}
+.productos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+.box{
+    width: 340px;
+    margin: 20px;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.3);
+}
+.productos div img{
+    width: 100%;
+}
+.imageText{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+.text span{
+    margin: 10px 10px;
+}
+
+.ubicacion, .confirmarPedido, .detalle, .precioFinal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.map-movil{
+    display: none;
+}
+.footer{
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(/img/bg-footer01.jpg) no-repeat center center;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 40px;
+}
+.footer>h3, .footer>li{
+    color: #000;
+}
+.footer #logo{
+    display: flex;
+    align-items: center;
+}
+.footer li{
+    list-style: none;
+    margin: 5px 0;
+}
+.footer h3{
+    margin: 5px 0;
+}
+.fa-brands{
+    margin: 0 5px;
+}
+
+.pedidos{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background: #fff;
+    width: 60vw;
+    box-shadow: 0 0 60px -10px rgba(0,0,0,.25);
+    transition: .7s;
+  }
+  .input-pedidos {
+    border: none;
+    border-bottom: 1px solid #bdc3c7;
+    padding: 5px 3px;
+    margin: 25px;
+    transition: .7s;
+  }
+  .input-pedidos::placeholder {
+    color: rgba(0,0,0,.4);
+  }
+  .input-pedidos:focus {
+    outline-style:none;
+    box-shadow: 0 1px 0 #bdc3c7;
+    border-top: transparent;
+    transition: 200ms;
+  }
+  .tipo-prod{
+    margin: 10px 25px;
+  }
+  .input-btn{
+    width: 100%;
+    padding: 5px 15px;
+    background-color: #fff;
+    border: solid 1px #bdc3c7;
+  }
+  .btn-form{
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+  }
+  .input-btn:hover{
+    background-color: #E9ECEF;
+    border: solid 1px #000;
+  }
+  .input-radio{
+    margin: -5px 0px;
+  }
+  textarea{
+    padding: 10px;
+    margin: 25px;
+    border: 1px solid #bdc3c7;
+  }
+
+  .modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+}
+
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+}
+
+.modal__container{
+    position: relative;
+    margin: auto;
+    width: 450px;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__close {    
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #ff1e00;
+    font-size: 80%;
+    transition: background-color .3s;
+    font-weight: 700;
+}
+
+.carrito{
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+}
+
+.totalPrecio{
+    display: flex;
+    flex-direction: column;
+}
+
+.carrito p{
+    margin: 10px 0;
+}
+
+.carrito span, .totalPrecio span{
+    text-align: end;
+    margin: 0.5rem;
+}
+
+.confirmarPedido{    
+    padding-top: 30px;
+} 
+
+
+@media (max-width: 576px) {
+    .slider-box ul li img{
+        height: 50vh;
+        width: auto;
+    }
+    .banner{
+        height: 30vh;
+    }
+    .imageText{
+        font-size: 2rem;
+    }
+    .footer{
+        flex-direction: column;
+    }
+    .footer div{
+        margin: 10px 0;
+    }
+    h2{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .login span{
+        display: none;
+    }
+    .map-movil{
+        display: block;
+    }
+    .map-full{
+        display: none;
+    }
+    .form-container{
+        width: 80vw;
+        padding: 10px;
+    }
+    section{
+        padding: 0 50px;
+    }
+
+    .abrirMenu, .cerrarMenu, .abrirCarrito, .cerrarCarrito {
+        display: block;        
+        border: 0;
+        cursor: pointer;
+        background: #f4eeff;
+    }
+    .cerrarMenu, .cerrarCarrito{
+        text-align: end;
+        /* margin-right: 20px; */
+        margin-top: 20px;
+    }
+    .cerrarMenu i, .abrirMenu i, .abrirCarrito i, .cerrarCarrito i{
+        font-size: 1.5rem;
+        background: transparent;
+    }
+    
+    .navbar, .verCarrito{
+        position: fixed;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        top: 0;
+        right: 0;
+        background: #F4EEFF;
+        bottom: 0;
+        left: 0;
+        padding: 0 25px;
+    }
+    .navbar.visible, .verCarrito.visible{
+        opacity: 1;
+        visibility: visible;
+        transition: 0.5s;
+    }
+    .navbar ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 300px 0;
+    }
+    .navbar ul li{
+        margin: 10px 0;
+    }
+    .confirmarPedido{
+        padding: 70px 30px 0;
+    }
+}

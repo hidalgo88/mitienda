@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lilita+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/50a29eb9a4.js" crossorigin="anonymous"></script>
+    <title>Mi tienda - Bazar y decoracion</title>
+</head>
+<body>
+    <header>
+        <button class="abrirMenu" id="abrirMenu"><i class="fa-solid fa-bars"></i></button>
+        <nav>
+            <div id="logo" >
+                <a href="index.html"><img src="img/tienda02.png" alt="logo" width="100px"></a> 
+            </div>
+        </nav>
+        <div class="navbar" id="navbar">
+            <button class="cerrarMenu" id="cerrarMenu"><i class="fa-solid fa-xmark"></i></button>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="#">PRODUCTOS</a></li>
+                <li><a href="#">ACERCA DE NOSOTROS</a></li>
+                <li><a href="sucursales.html">SUCURSALES</a></li>
+                <li><a href="pedidos.html">PEDIDOS</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+                <li><a href="carrito.html">CARRITO DE COMPRAS</a></li>
+            </ul>
+        </div>
+        <button class="abrirCarrito" id="abrirCarrito"><i class="fa-solid fa-cart-shopping "></i></button>
+        <!-- <a href="carrito.html" class="iconoCart"><i class="fa-solid fa-cart-shopping "></i></a> -->
+        <div class="verCarrito" id="verCarrito">
+            
+            <button class="cerrarCarrito" id="cerrarCarrito"><i class="fa-solid fa-xmark"></i></button>
+            <div class="carrito" id="carrito">
+                <h3>TU CARRITO</h3>
+                <p>Los productos en tu carrito no estan reservados. Finalice el proceso de compra y espere la confirmacion por mail o whatsapp.</p>
+            </div>
+            <div class="totalPrecio">
+                <span id="totalPrecio"></span>
+            </div>
+            <a href="carrito.html"><button class="input-btn pedido-btn">CONFIRMAR PEDIDO</button></a>
+            <a href="index.html"><button class="input-btn" id="btnLimpiar" onclick="limpiarCarrito()">VACIAR CARRITO</button></a>
+            
+        </div>
+    </header> 
+    <main>
+        <section>
+            <h2>PEDIDOS</h2>
+            <div class="pedidos">
+                <form action="https://formspree.io/f/xbljgpoz" method="post">
+                    <div class="form-container">
+                        <input class="input-pedidos" size="30" type="text" name="nombre" placeholder="Nombre" required>
+                        <input class="input-pedidos" size="30" type="number" name="telefono" placeholder="Telefono" required>
+                        <input class="input-pedidos" size="30" type="email" name="email" placeholder="Email" required>
+                        <span class="tipo-prod">Tipo de producto</span>
+                        <div class="input-radio">
+                            <input class="input-pedidos" type="radio" id="cocina" name="tipo_producto" value="Cocina" required>
+                            <label for="cocina">Cocina</label>
+                        </div>
+                        <div class="input-radio">
+                            <input class="input-pedidos" type="radio" id="decoracion" name="tipo_producto" value="Decoración">
+                            <label for="decoracion">Decoración</label>
+                        </div>
+                        <div class="input-radio">
+                            <input class="input-pedidos" type="radio" id="bano" name="tipo_producto" value="Baño">
+                             <label for="bano">Baño</label>
+                        </div>                        
+                        <div class="input-radio">
+                            <input class="input-pedidos" type="radio" id="organizacion" name="tipo_producto" value="Organización">
+                            <label for="organizacion">Organización</label>
+                        </div>
+                        <div class="tipo-prod">
+                            <label for="cantidad">Cantidad:</label>
+                            <select required name="cantidad" id="cantidad">
+                                <option value="" selected disabled>Elija una opción</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                        <div class="btn-form">
+                            <input class="input-btn" type="submit" value="Enviar">
+                            <input class="input-btn" type="reset" value="Borrar">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div id="logo">
+                <a href="index.html"><img src="img/tienda02.png" alt="logo" width="100px"></a> 
+            </div>
+            <div class="">
+                <h3>PRODUCTOS</h3>
+                <ul>
+                    <li><a href="#">Cocina</a></li>
+                    <li><a href="#">Decoracion</a></li>
+                    <li><a href="#">Baño</a></li>
+                    <li><a href="#">Organizacion</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <h3>NOSOTROS</h3>
+                <ul>                    
+                    <li><a href="#">Acerca de nosotros</a></li>
+                    <li><a href="sucursales.html">Sucursales</a></li>
+                </ul>
+                <h3>REDES SOCIALES</h3>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <div class="">
+                <h3>AYUDA</h3>
+                <ul>
+                    <li><a href="pedidos.html">Pedidos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i> +54 11 6060 1234</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="js/javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lilita+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/50a29eb9a4.js" crossorigin="anonymous"></script>
+    <title>Mi tienda - Bazar y decoracion</title>
+</head>
+<body>
+    <header>
+        <button class="abrirMenu" id="abrirMenu"><i class="fa-solid fa-bars"></i></button>
+        <nav>
+            <div id="logo" >
+                <a href="index.html"><img src="img/tienda02.png" alt="logo" width="100px"></a> 
+            </div>
+        </nav>
+        <div class="navbar" id="navbar">
+            <button class="cerrarMenu" id="cerrarMenu"><i class="fa-solid fa-xmark"></i></button>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="#">PRODUCTOS</a></li>
+                <li><a href="#">ACERCA DE NOSOTROS</a></li>
+                <li><a href="sucursales.html">SUCURSALES</a></li>
+                <li><a href="pedidos.html">PEDIDOS</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+                <li><a href="carrito.html">CARRITO DE COMPRAS</a></li>
+            </ul>
+        </div>
+        <button class="abrirCarrito" id="abrirCarrito"><i class="fa-solid fa-cart-shopping "></i></button>
+        <!-- <a href="carrito.html" class="iconoCart"><i class="fa-solid fa-cart-shopping "></i></a> -->
+        <div class="verCarrito" id="verCarrito">
+            
+            <button class="cerrarCarrito" id="cerrarCarrito"><i class="fa-solid fa-xmark"></i></button>
+            <div class="carrito" id="carrito">
+                <h3>TU CARRITO</h3>
+                <p>Los productos en tu carrito no estan reservados. Finalice el proceso de compra y espere la confirmacion por mail o whatsapp.</p>
+            </div>
+            <div class="totalPrecio">
+                <span id="totalPrecio"></span>
+            </div>
+            <a href="carrito.html"><button class="input-btn pedido-btn">CONFIRMAR PEDIDO</button></a>
+            <a href="index.html"><button class="input-btn" id="btnLimpiar" onclick="limpiarCarrito()">VACIAR CARRITO</button></a>
+            
+        </div>
+    </header>
+    <main>
+        <div class="ubicacion">
+            <h2>CASA CENTRAL</h2>
+            <iframe class="map-movil" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d845.1151119968831!2d-58.4051645775039!3d-34.59847366526991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca9187a6e031%3A0x4a4237cad469313f!2sAv.%20Pueyrred%C3%B3n%20991%2C%20C1032ABJ%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1730503892293!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="map-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d845.1151119968831!2d-58.4051645775039!3d-34.59847366526991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca9187a6e031%3A0x4a4237cad469313f!2sAv.%20Pueyrred%C3%B3n%20991%2C%20C1032ABJ%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1730503892293!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="ubicacion">
+            <h2>SUCURSAL PRIMERA JUNTA</h2>
+            <iframe class="map-movil" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1641.6660009017967!2d-58.44287845605206!3d-34.62104948046793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDM3JzE1LjgiUyA1OMKwMjYnMzEuMiJX!5e0!3m2!1ses-419!2sar!4v1730588064606!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="map-full" <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1641.6660009017967!2d-58.44287845605206!3d-34.62104948046793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDM3JzE1LjgiUyA1OMKwMjYnMzEuMiJX!5e0!3m2!1ses-419!2sar!4v1730588064606!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="ubicacion">
+            <h2>SUCURSAL MORON</h2>
+            <iframe class="map-movil" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1641.1074897197095!2d-58.61807550611392!3d-34.64927334318474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDM4JzU3LjQiUyA1OMKwMzcnMDEuNiJX!5e0!3m2!1ses-419!2sar!4v1730588266593!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="map-full" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1641.1074897197095!2d-58.61807550611392!3d-34.64927334318474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDM4JzU3LjQiUyA1OMKwMzcnMDEuNiJX!5e0!3m2!1ses-419!2sar!4v1730588266593!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div id="logo">
+                <a href="index.html"><img src="img/tienda02.png" alt="logo" width="100px"></a> 
+            </div>
+            <div class="">
+                <h3>PRODUCTOS</h3>
+                <ul>
+                    <li><a href="#">Cocina</a></li>
+                    <li><a href="#">Decoracion</a></li>
+                    <li><a href="#">Baño</a></li>
+                    <li><a href="#">Organizacion</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <h3>NOSOTROS</h3>
+                <ul>                    
+                    <li><a href="#">Acerca de nosotros</a></li>
+                    <li><a href="sucursales.html">Sucursales</a></li>
+                </ul>
+                <h3>REDES SOCIALES</h3>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <div class="">
+                <h3>AYUDA</h3>
+                <ul>
+                    <li><a href="pedidos.html">Pedidos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i> +54 11 6060 1234</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="js/javascript.js"></script>
+</body>
+</html>
