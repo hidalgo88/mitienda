@@ -64,7 +64,7 @@ const modal = document.querySelector('.modal');
 const closeModal = document.querySelector('.modal__close');
 
 function openModal() {
-    e.preventDefault();
+    // e.preventDefault();
     modal.classList.add('modal--show');
 }
 
